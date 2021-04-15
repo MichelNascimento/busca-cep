@@ -1,0 +1,21 @@
+:root {
+  --light: #fafafa;
+  --dark: #000000;
+  --dark-green: #002b16;
+  --light-gray: #c4c4c4;
+  --light-green: #00d66f;
+  --light-green-hover: #04bb63;
+
+  --shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+
+  --full-width: 100%;
+  --full-height: 100%;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}

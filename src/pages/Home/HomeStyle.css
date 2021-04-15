@@ -1,0 +1,39 @@
+.home-container {
+  background-color: var(--dark-green);
+  width: var(--full-width);
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-content {
+  width: var(--full-width);
+  height: var(--full-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-top: 2rem;
+  position: absolute;
+}
+
+.home-content h1 {
+  color: var(--light);
+  font-size: 3rem;
+}
+
+.home-content span {
+  color: var(--light);
+  margin-top: 1.5rem;
+}
+
+.search-container {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+}
