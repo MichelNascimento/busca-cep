@@ -1,0 +1,40 @@
+.result-container {
+  width: var(--full-width);
+  height: 50vh;
+  display: flex;
+}
+
+.empty-state {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.empty-state span {
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.result {
+  width: 60%;
+  padding: 3.5rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.result h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  border-bottom: 0.5px solid var(--light-gray);
+  margin-bottom: 1rem;
+}
+
+.result h1, .data span {
+  line-height: 2;
+  color: var(--dark);
+}
+
+.data span:nth-child(2) {
+  font-weight: 600;
+}
