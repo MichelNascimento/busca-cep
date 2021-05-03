@@ -1,7 +1,7 @@
 import './ButtonStyle.css'
 
 type ButtonProps = {
-  onClick: () => {}
+  onClick: () => void
 }
 
 const Button = (props: ButtonProps) => {

@@ -1,34 +1,38 @@
+import { useContext } from 'react'
+import { ZipCodeContext } from '../../contexts/ZipCodeContext'
 import './ResultStyle.css'
 
 const Result = () => {
+  const context = useContext(ZipCodeContext)
+
   return (
     <div className="result-container">
       <div className="result">
-        <h1>Rua John Doe</h1>
+        <h1>{context.street}</h1>
         <div className="data">
           <span>CEP: </span>
-          <span>01001010</span>
+          <span>{ }</span>
         </div>
         <div className="data">
           <span>Bairro: </span>
-          <span>Limoeiro</span>
+          <span>{ }</span>
         </div>
         <div className="data">
           <span>Logradouro: </span>
-          <span>Nove de Julho</span>
+          <span>{ }</span>
         </div>
         <div className="data">
           <span>Localidade: </span>
-          <span>São Paulo</span>
+          <span>{ }</span>
         </div>
         <div className="data">
           <span>Estado: </span>
-          <span>SP</span>
+          <span>{ }</span>
         </div>
       </div>
-      {/* <div className="empty-state">
+      <div className="empty-state">
         <span>O resultado da busca será exibido aqui.</span>
-      </div> */}
+      </div>
     </div>
   )
 }
