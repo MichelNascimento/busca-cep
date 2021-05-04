@@ -1,8 +1,12 @@
 import './ButtonStyle.css'
 
-const Button = () => {
+type ButtonProps = {
+  onClick: () => {}
+}
+
+const Button = (props: ButtonProps) => {
   return (
-    <button>Buscar</button>
+    <button onClick={props.onClick}>Buscar</button>
   )
 }
 
