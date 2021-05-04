@@ -4,9 +4,9 @@ type ButtonProps = {
   onClick: () => void
 }
 
-const Button = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
-    <button onClick={props.onClick}>Buscar</button>
+    <button onClick={onClick}>Buscar</button>
   )
 }
 

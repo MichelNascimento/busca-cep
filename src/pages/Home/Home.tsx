@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <h1>O Brasil inteiro está aqui</h1>
         <span>Informe um CEP no campo abaixo e realize uma busca para visualizar mais detalhes do endereço.</span>
         <div className="search-container">
-          <Input onChange={e => setZipCode(e.target.value)} />
+          <Input onChange={e => setZipCode(Number(e.target.value))} />
           <Button onClick={() => GetZipCode(zipCode)} />
         </div>
       </div>
