@@ -1,12 +1,13 @@
+import React from 'react'
 import './InputStyle.css'
 
 type InputProps = {
-  onChange: (e: any) => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Input = (props: InputProps) => {
+const Input: React.FC<InputProps> = ({ onChange }) => {
   return (
-    <input type="text" placeholder="Digite o CEP aqui..." onChange={props.onChange}/>
+    <input type="text" placeholder="Digite o CEP aqui..." onChange={onChange}/>
   )
 }
 

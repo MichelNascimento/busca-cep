@@ -1,15 +1,15 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-import Button from '../../components/Button/Button'
 import Header from '../../components/Header/Header'
 import Input from '../../components/Input/Input'
+import Button from '../../components/Button/Button'
 
 import './HomeStyle.css'
 
-import GetCep from '../../services/GetCep'
+import GetZipCode from '../../services/GetZipCode'
 
 const Home: React.FC = () => {
-  const [cep, setCep] = useState(0)
+  const [zipCode, setZipCode] = useState(0)
 
   return (
     <div className="home-container">
@@ -18,8 +18,8 @@ const Home: React.FC = () => {
         <h1>O Brasil inteiro está aqui</h1>
         <span>Informe um CEP no campo abaixo e realize uma busca para visualizar mais detalhes do endereço.</span>
         <div className="search-container">
-          <Input onChange={e => setCep(e.target.value)} />
-          <Button onClick={() => GetCep(cep)} />
+          <Input onChange={e => setZipCode(Number(e.target.value))} />
+          <Button onClick={() => GetZipCode(zipCode)} />
         </div>
       </div>
     </div>
