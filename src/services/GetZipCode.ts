@@ -1,15 +1,14 @@
 import request from './http'
 
-const GetZipCode = async(zipCode: Number) => {
-  try {
-    await request({
-      method: 'GET',
-      url: `/${zipCode}/json`
-    })
-      .then(response => response.data)
-  } catch (error) {
-    console.log('Erro ao buscar ZipCode: ', error)
-  }
+export const GetZipCode = async (zipCode: string): Promise<any> => {
+  return new Promise((resolve) => {
+    try {
+      request(`/${zipCode}/json`)
+        .then(response => {
+          resolve(response.data)
+        })
+    } catch (error) {
+      console.log('Error fetching zip code: ', error)
+    }
+  })
 }
-
-export default GetZipCode
