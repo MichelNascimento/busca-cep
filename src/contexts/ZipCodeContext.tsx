@@ -1,38 +1,40 @@
 import { createContext, useState, ReactNode } from 'react'
 
-type ResultProps = {
+type AddressProps = {
   street: string
-  zipCode: number
+  zipCode: string
   district: string
-  address: string
   locality: string
   state: string
 }
 
-export const ZipCodeContext = createContext({} as ResultProps)
+type ZipCodeProps = {
+  address: AddressProps
+  setData: (addressData: AddressProps) => void
+}
 
 type ZipCodeContextProviderProps = {
   children: ReactNode
 }
 
-export function ZipCodeContextProvider(props: ZipCodeContextProviderProps) {  
-  const [street, setStreet] = useState('')
-  const [zipCode, setZipCode] = useState(0)
-  const [district, setDistrict] = useState('')
-  const [locality, setLocality] = useState('')
-  const [address, setAddress] = useState('')
-  const [state, setState] = useState('')
+export const ZipCodeContext = createContext({} as ZipCodeProps)
+
+export const ZipCodeContextProvider: React.FC<ZipCodeContextProviderProps> = ({ children }) => {
+  const [address, setAddress] = useState({
+    street: '',
+    zipCode: '',
+    district: '',
+    locality: '',
+    state: '',
+  })
+
+  const setData = (addressData: AddressProps) => {
+    setAddress(prev => ({ ...prev, ...addressData }))
+  }
 
   return (
-    <ZipCodeContext.Provider value={{
-      street,
-      zipCode,
-      district,
-      locality,
-      address,
-      state
-    }}>
-      {props.children}
+    <ZipCodeContext.Provider value={{ address, setData }}>
+      {children}
     </ZipCodeContext.Provider>
   )
 }
