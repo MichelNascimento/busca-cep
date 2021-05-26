@@ -1,4 +1,4 @@
-input {
+.input-zip-code {
   background-color: var(--light);
   height: 80%;
   width: 30%;
@@ -12,6 +12,6 @@ input {
   box-shadow: var(--shadow);
 }
 
-input::placeholder {
+.input-zip-code::placeholder {
   color: var(--light-gray);
 }

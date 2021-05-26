@@ -1,4 +1,5 @@
 import React from 'react'
+import InputZipCode from 'react-input-mask'
 import './InputStyle.css'
 
 type InputProps = {
@@ -7,7 +8,7 @@ type InputProps = {
 
 const Input: React.FC<InputProps> = ({ onChange }) => {
   return (
-    <input type="text" placeholder="Digite o CEP aqui..." onChange={onChange}/>
+    <InputZipCode mask="99999-999" className="input-zip-code" type="text" placeholder="Digite o CEP aqui..." onChange={onChange}/>
   )
 }
 
