@@ -19,7 +19,7 @@ const Home: React.FC = () => {
     const data = await GetZipCode(zipCode)
 
     setData({
-      street: data?.logradouro ?? '', // Operador de coalescência nula (Em js puro, ficaria: data && data.logradouro).
+      street: data?.logradouro ?? '',
       zipCode: data?.cep ?? '',
       district: data?.bairro ?? '',
       locality: data?.localidade ?? '',
