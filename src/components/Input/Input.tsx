@@ -12,7 +12,7 @@ const Input: React.FC<InputProps> = ({ onChange }) => {
     <input
       className="input-zip-code"
       type="text"
-      placeholder="Digite o CEP aqui..."
+      placeholder="Digite o CEP aqui"
       onChange={onChange}
       onKeyUp={mask}
     />
