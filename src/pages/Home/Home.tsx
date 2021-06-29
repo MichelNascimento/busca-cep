@@ -18,6 +18,11 @@ const Home: React.FC = () => {
   const handleZipCode = async () => {
     const data = await GetZipCode(zipCode)
 
+    if (data.erro) {
+      alert('Ocorreu um erro na busca do CEP. Por favor, valide se as informações inseridas estão corretas.')
+      return
+    }
+
     setData({
       street: data?.logradouro ?? '',
       zipCode: data?.cep ?? '',
