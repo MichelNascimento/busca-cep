@@ -1,0 +1,58 @@
+.not-found-container {
+  height: 100vh;
+}
+
+.background-green {
+  height: 50vh;
+  background-color: var(--dark-green);
+}
+
+.content {
+  width: 80vw;
+  max-width: 1400px;
+  height: 80vh;
+  max-height: 550px;
+  margin: 0 auto;
+  margin-top: -20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  color: var(--light);
+  font-size: 4.5rem;
+  font-weight: 600;
+}
+
+.content p {
+  color: var(--light);
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+
+.content img {
+  height: 80%;
+  max-height: 400px;
+}
+
+.back-to-home {
+  height: 5rem;
+  width: 19.375rem;
+  margin-top: 5rem;
+  margin-left: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--light-green);
+  color: var(--light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.back-to-home:hover {
+  background-color: var(--light-green-hover);
+  transition: 0.3s ease-in-out;
+}
