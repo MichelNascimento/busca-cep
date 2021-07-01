@@ -8,16 +8,15 @@
 }
 
 .content {
-  width: 80%;
+  width: 80vw;
   max-width: 1400px;
-  height: 80%;
+  height: 80vh;
+  max-height: 550px;
   margin: 0 auto;
   margin-top: -20rem;
-  padding: 3rem 5rem;
   display: flex;
   align-items: center;
-  position: relative;
-  transform: translate3d(-50%, 50%);
+  justify-content: center;
 }
 
 .content h1 {
@@ -37,10 +36,11 @@
   max-height: 400px;
 }
 
-button {
+.back-to-home {
   height: 5rem;
   width: 19.375rem;
   margin-top: 5rem;
+  margin-left: 0;
   border: none;
   border-radius: 5px;
   background-color: var(--light-green);
@@ -52,7 +52,7 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-button:hover {
+.back-to-home:hover {
   background-color: var(--light-green-hover);
   transition: 0.3s ease-in-out;
 }

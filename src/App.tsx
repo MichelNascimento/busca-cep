@@ -2,14 +2,12 @@ import './App.css';
 
 import { ZipCodeContextProvider } from './contexts/ZipCodeContext';
 
-import Home from './pages/Home/Home';
-import Result from './pages/Result/Result';
+import { routes as Routes } from './routes'
 
 function App() {
   return (
     <ZipCodeContextProvider>
-      <Home />
-      <Result />
+      <Routes />
     </ZipCodeContextProvider>
   );
 }
